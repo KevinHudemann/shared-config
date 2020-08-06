@@ -11,6 +11,7 @@ stages:
   # Is required by project
   # TestCase: Test that shared config works by removing from the project itself
   backendIntegrationTests:
+    credentialsDirectory: 'integration-tests/src/test/resources'
     credentials:
       - alias: 'MOCK_SYSTEM'
         credentialId: 'MY-MOCK-ERP'
