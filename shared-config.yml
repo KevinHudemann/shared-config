@@ -11,18 +11,3 @@ stages:
     credentials:
       - alias: 'MOCK_SYSTEM'
         credentialId: 'MY-MOCK-ERP'
-
-  endToEndTests:
-    appUrls:
-      - url: 'https://approuter-cloudpot.cfapps.sap.hana.ondemand.com'
-        credentialId: e2e-test-user-cf
-        parameters: ['--NIGHTWATCH_ENV=chrome']
-      - url: 'https://approuter-cloudpot.cfapps.sap.hana.ondemand.com'
-        credentialId: e2e-test-user-cf
-        parameters: ['--NIGHTWATCH_ENV=firefox']
-    cfCreateServices:
-      - serviceManifest: 'services-manifest.yml'
-        space: 'Test'
-    cfTargets:
-      - space: 'Test'
-        manifest: 'manifest-test.yml'
