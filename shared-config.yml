@@ -1,13 +1,10 @@
-#steps:
+steps:
   # Should be overritten by the projects if projects only support jdk 8
   # TestCase: Test that project (book address manager) has precedence
-#  mavenExecute:
- #   dockerImage: 'maven:3.6.3-jdk-14-slim'
-
-stages:
-  build:
+  mavenExecute:
     dockerImage: 'maven:3.6.3-jdk-14-slim'
-  
+
+stages: 
   # Is required by project
   # TestCase: Test that shared config works by removing from the project itself
   backendIntegrationTests:
